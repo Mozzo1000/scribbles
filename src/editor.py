@@ -1,8 +1,8 @@
-from PyQt6.QtWidgets import QPlainTextEdit
+from PyQt6.QtWidgets import QPlainTextEdit, QMessageBox 
 from PyQt6.QtGui import QKeySequence, QShortcut
 from datetime import datetime
 import os
-
+import traceback
 
 class Editor(QPlainTextEdit):
     def __init__(self, parent):
@@ -36,12 +36,14 @@ class Editor(QPlainTextEdit):
     def save(self):
         if not self.filename:
             self.filename = datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ".txt"
-
-        with open(os.path.join(self.path, self.filename), "w") as f:
-            f.write(self.toPlainText())
-        self.parent.statusBar().showMessage(
+        try:
+            with open(os.path.join(self.path, self.filename), "w") as f:
+                f.write(self.toPlainText())
+            self.parent.statusBar().showMessage(
             f"Note saved ({self.filename})", 2000)
-
+        except Exception:
+            QMessageBox.critical(self, "Unexpected error occurred", str(traceback.format_exc()))
+        
     def new(self):
         self.filename = None
         self.setPlainText("")
