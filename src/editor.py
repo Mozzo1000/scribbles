@@ -35,7 +35,7 @@ class Editor(QPlainTextEdit):
 
     def save(self):
         if not self.filename:
-            self.filename = datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ".txt"
+            self.filename = datetime.now().strftime("%Y-%m-%d %H:%M:%S").replace(":", "") + ".txt"
         try:
             with open(os.path.join(self.path, self.filename), "w") as f:
                 f.write(self.toPlainText())
