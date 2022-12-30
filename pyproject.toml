@@ -9,7 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 PyQt6 = "6.4.0"
-darkdetect = "0.7.1"
+darkdetect = "0.8.0"
 
 
 [build-system]

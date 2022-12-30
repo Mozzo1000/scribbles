@@ -2,15 +2,18 @@
 
 [[package]]
 name = "darkdetect"
-version = "0.7.1"
+version = "0.8.0"
 description = "Detect OS Dark Mode from Python"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.6"
 files = [
-    {file = "darkdetect-0.7.1-py2.py3-none-any.whl", hash = "sha256:3efe69f8ecd5f1b7f4fbb0d1d93f656b0e493c45cc49222380ffe2a529cbc866"},
-    {file = "darkdetect-0.7.1.tar.gz", hash = "sha256:47be3cf5134432ddb616bbffc927237718407914993c82809983e7ccebf49013"},
+    {file = "darkdetect-0.8.0-py3-none-any.whl", hash = "sha256:a7509ccf517eaad92b31c214f593dbcf138ea8a43b2935406bbd565e15527a85"},
+    {file = "darkdetect-0.8.0.tar.gz", hash = "sha256:b5428e1170263eb5dea44c25dc3895edd75e6f52300986353cd63533fe7df8b1"},
 ]
+
+[package.extras]
+macos-listener = ["pyobjc-framework-Cocoa"]
 
 [[package]]
 name = "pyqt6"
@@ -73,4 +76,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "1efed7172cb6854a6eebc193521c2814bbdcea44f1751a604aff22f944a747ea"
+content-hash = "0ea1f872a61144af17306aff9b1ee81384afcb8867cf1bc7988847399529c734"
