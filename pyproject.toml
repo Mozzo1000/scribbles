@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "scribbles"
+version = "0.1.0"
+description = "A quick note taking application"
+authors = ["Andreas Backström"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+PyQt6 = "6.4.0"
+darkdetect = "0.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
