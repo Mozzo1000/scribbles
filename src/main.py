@@ -37,6 +37,8 @@ if __name__ == "__main__":
     elif darkdetect.isDark:
         icon = "icons/icon-black.png"
 
+    window.setWindowIcon(QIcon(os.path.join(basedir, icon)))
+
     tray = QSystemTrayIcon()
     tray.setIcon(QIcon(os.path.join(
         basedir, icon)))
